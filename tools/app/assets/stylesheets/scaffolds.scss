@@ -32,8 +32,19 @@ a {
 }
 
 div {
-  &.field, &.actions {
+  &.field, &.actions, &.field_label {
     margin-bottom: 10px;
+  }
+  &.field_label {
+    font-weight: bold;
+  }
+  &.field_label:before {
+    content: "• ";
+  }
+}
+
+td {
+  &.field_label {
   }
 }
 

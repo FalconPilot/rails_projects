@@ -7,11 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="overall_header">Welcome to my cool test app !</div>
+  <%= render 'layouts/header' %>
   <div class="main_contents">
-
-<%= yield %>
-
+    <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
   </div>
 </body>
 </html>

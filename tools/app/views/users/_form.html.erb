@@ -11,15 +11,50 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="field_label">
+          Name
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= f.text_field :name %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field_label">
+          Password
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= f.password_field :password_digest %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field_label">
+          Confirmation
+        </div>
+      </td>
+      <td>
+        <div class="field">
+          <%= f.password_field :password_confirm %>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </td>
+    </tr>
+  </table>
+
 <% end %>

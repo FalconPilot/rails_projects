@@ -6,8 +6,13 @@
 </p>
 
 <p>
-  <strong>Password:</strong>
-  <%= @user.password %>
+  <strong>Password digest:</strong>
+  <%= @user.password_digest %>
+</p>
+
+<p>
+  <strong>Password confirm:</strong>
+  <%= @user.password_confirm %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
